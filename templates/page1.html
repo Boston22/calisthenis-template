@@ -7,4 +7,84 @@
 {% block content %}
     <!--page content-->
     <h1>Page 1</h1>
+
+    <div class="container">
+  <h2>Form Validation</h2>
+  <p>In this example, we use <code>.was-validated</code> to indicate what's missing before submitting the form:</p>
+  <form action="/response" class="was-validated">
+      <!-- Height -->
+    <div class="form-group">
+      <label for="Height">What is your height?:</label>
+      <input type="text" class="form-control" id="height" placeholder="Enter height(ft)" name="Height" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <!-- Weight -->
+    <div class="form-group">
+      <label for="Weight">What is you weight?:</label>
+      <input type="text" class="form-control" id="weight" placeholder="Enter weight (lbs)" name="Weight" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <!-- age -->
+    <div class="form-group">
+      <label for="Age">What is your age?:</label>
+      <input type="text" class="form-control" id="age" placeholder="Enter age" name="Age" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <!-- body type -->
+    <div class="form-group">
+      <label for="BodyType">Are you looking to be slim, fit, or hulking?:</label>
+      <input type="text" class="form-control" id="bodyType" placeholder="Enter body type" name="BodyType" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+     <!-- want to workout? -->
+    <div class="form-group">
+      <label for="YourChoice">Are you working out by choice?:</label>
+      <input type="text" class="form-control" id="yourChoice" placeholder="Enter your choice" name="YourChoice" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>   <!-- want to workout? -->
+    </div>
+    <div class="form-group form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember" required> I am doing this of my own accord and not just filling it untruthfully.
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Check this checkbox to continue.</div>
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+
+
+
+
+
+
+  </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
 {% endblock %}
