@@ -15,23 +15,34 @@
       <!-- Height -->
     <div class="form-group">
       <label for="Height">What is your height?:</label>
-      <input type="text" class="form-control" id="height" placeholder="Enter height(ft)" name="Height" required>
+      <input type="number" class="form-control" id="height" placeholder="Enter height(ft)" name="Height" required>
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
     <!-- Weight -->
     <div class="form-group">
       <label for="Weight">What is you weight?:</label>
-      <input type="text" class="form-control" id="weight" placeholder="Enter weight (lbs)" name="Weight" required>
+      <input type="number" class="form-control" id="weight" placeholder="Enter weight (lbs)" name="Weight" required>
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
     <!-- age -->
     <div class="form-group">
-      <label for="Age">What is your age?:</label>
-      <input type="text" class="form-control" id="age" placeholder="Enter age" name="Age" required>
-      <div class="valid-feedback">Valid.</div>
-      <div class="invalid-feedback">Please fill out this field.</div>
+        <label for="Age">Please select your age.:</label>
+         <input type="radio" id="age1" name="age" value="14">
+         <label for="age1">14 - 30</label><br>
+         <input type="radio" id="age2" name="age" value="31">
+         <label for="age2">31 - 50</label><br>
+         <input type="radio" id="age3" name="age" value="51">
+         <label for="age3">51 - 60</label><br>
+         <input type="radio" id="age4" name="age" value="61">
+         <label for="age4">61 - 75</label><br>
+         <input type="radio" id="age5" name="age" value="76">
+         <label for="age5">76 - 85</label><br>
+         <input type="radio" id="age6" name="age" value="86">
+         <label for="age6">86 - 100</label><br>
+         <input type="radio" id="age7" name="age" value="100">
+         <label for="age7">101+</label><br><br>
     </div>
     <!-- body type -->
     <div class="form-group">
@@ -55,6 +66,7 @@
       </label>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
+
 
 
 

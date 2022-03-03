@@ -16,13 +16,9 @@ def render_page2():
 
 @app.route("/r")
 def render_response():
-    return render_template('response.html')
-
-@app.route("/r")
-def render_response():
     height = int(request.args['Height'])
     weight = int(request.args['Weight'])
-    age = int(request.args['Age'])
+    age = request.args['Age']
     bodyType = int(request.args['BodyType'])
     yourChoice = int(request.args['YourChoice'])
     #The request object stores information about the request sent to the server.
@@ -40,30 +36,28 @@ def render_response():
     #This is just for being here, look up actual ranges in inches.
     if 20 <= weight or weight <= 30:
         reply4 = "(input instructions)"
-    if 20 <= weight or weight <= 30:
+    if 40 <= weight or weight <= 50:
         reply5 = "(input instructions)"
-    if 20 <= weight or weight <= 30:
+    if 60 <= weight or weight <= 70:
         reply6 = "(input instructions)"
-    if 20 <= weight or weight <= 30:
+    if 80 <= weight or weight <= 90:
         reply7 = "(input instructions)"
 
     #This is just for being here, look up actual ranges in inches.
-    if 10 <= age or age <= 20:
+    if age == "14 - 30":
         reply8 = "(input instructions)"
-    if 10 <= age or age <= 20:
+    if age == str"31 - 50":
         reply9 = "(input instructions)"
-    if 10 <= age or age <= 20:
+    if age == str"51-60":
         reply10 = "(input instructions)"
-    if 10 <= age or age <= 20:
+    if age == str"61-75":
         reply11 = "(input instructions)"
-    if 10 <= age or age <= 20:
+    if age == str"76-85":
         reply12 = "(input instructions)"
-    if 10 <= age or age <= 20:
+    if age == str"86-100":
         reply13 = "(input instructions)"
-    if 10 <= age or age <= 20:
-        reply14 = "(input instructions)"
-    if 10 <= age or age <= 20:
-        reply15 = "(input instructions)"
+    if age == str"101+":
+        reply15 = "(HOW ARE YOU ALIVE?)"
 
     #This is just for being here, look up actual ranges in inches.
     if 20 <= bodyType or bodyType <= 30:
@@ -73,6 +67,20 @@ def render_response():
     if 20 <= bodyType or bodyType <= 30:
         reply18 = "(input instructions)"
 
+    #This is just for being here, look up actual ranges in inches.
+    if 20 <= currentBody or currentBody <= 30:
+        reply19 = "(input instructions)"
+    if 20 <= currentBody or currentBody <= 30:
+        reply20 = "(input instructions)"
+    if 20 <= currentBody or currentBody <= 30:
+        reply21 = "(input instructions)"
+
+
+    #This is just for being here, look up actual ranges in inches.
+    #if 20 = bodyType or bodyType <= 30:
+        #reply19 = "(input instructions)"
+
+    return render_template('response.html')
 
 
 
@@ -89,8 +97,7 @@ def render_response():
 
 
 
-
-    return render_template('response.html', response1 = reply1, response2 = reply2, response3 = reply3, response4 = reply4, response5 = reply5, response6 = reply6, response7 = reply7, response8 = reply8, response9 = reply9, response10 = reply10, response11 = reply11, response12 = reply12, response13 = reply13, responce14 = reply14, responce15 = reply15, responce16 = reply16, responce17 = reply17, responce18 = reply18, responce19 = reply19, responce20 = reply20, responce21 = reply21, responce22 = reply22, responce23 = reply23)
+    return render_template('response.html', response1 = reply1, response2 = reply2, response3 = reply3, response4 = reply4, response5 = reply5, response6 = reply6, response7 = reply7, response8 = reply8, response9 = reply9, response10 = reply10, response11 = reply11, response12 = reply12, response13 = reply13, response14 = reply14, response15 = reply15, response16 = reply16, response17 = reply17, response18 = reply18, response19 = reply19, response20 = reply20, response21 = reply21)
 
 if __name__=="__main__":
     app.run(debug=True)
