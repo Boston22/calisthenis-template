@@ -12,6 +12,13 @@
   <h2>Form Validation</h2>
   <p>In this example, we use <code>.was-validated</code> to indicate what's missing before submitting the form:</p>
   <form action="/r" class="was-validated">
+      <!-- sex -->
+      <div class="form-group">
+      <label for="Sex">Please select your sex.:</label>
+      <input type="radio" id="sex1" name="sex" value="Female">
+      <label for="sex1">Male</label><br>
+      <input type="radio" id="sex2" name="sex" value="Male">
+      <label for="sex2">Female</label><br>
       <!-- Height -->
     <div class="form-group">
       <label for="Height">What is your height?:</label>
@@ -28,21 +35,10 @@
     </div>
     <!-- age -->
     <div class="form-group">
-        <label for="Age">Please select your age.:</label>
-         <input type="radio" id="age1" name="age" value="14">
-         <label for="age1">14 - 30</label><br>
-         <input type="radio" id="age2" name="age" value="31">
-         <label for="age2">31 - 50</label><br>
-         <input type="radio" id="age3" name="age" value="51">
-         <label for="age3">51 - 60</label><br>
-         <input type="radio" id="age4" name="age" value="61">
-         <label for="age4">61 - 75</label><br>
-         <input type="radio" id="age5" name="age" value="76">
-         <label for="age5">76 - 85</label><br>
-         <input type="radio" id="age6" name="age" value="86">
-         <label for="age6">86 - 100</label><br>
-         <input type="radio" id="age7" name="age" value="100">
-         <label for="age7">101+</label><br><br>
+        <label for="Age">Are you looking to be slim, fit, or hulking?:</label>
+        <input type="number" class="form-control" id="age" placeholder="Enter your age" name="Age" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
     </div>
     <!-- body type -->
     <div class="form-group">
