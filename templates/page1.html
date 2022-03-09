@@ -14,15 +14,15 @@
   <form action="/r" class="was-validated">
       <!-- sex -->
       <div class="form-group">
-      <label for="Sex">Please select your sex.:</label>
-      <input type="radio" id="sex1" name="sex" value="Female">
+      <label for="Sex">Please select your sex.:</label><br>
+      <input type="radio" id="male" name="Sex" value="male">
       <label for="sex1">Male</label><br>
-      <input type="radio" id="sex2" name="sex" value="Male">
+      <input type="radio" id="sex2" name="Sex" value="female">
       <label for="sex2">Female</label><br>
       <!-- Height -->
     <div class="form-group">
       <label for="Height">What is your height?:</label>
-      <input type="number" class="form-control" id="height" placeholder="Enter height(ft)" name="Height" required>
+      <input type="number" class="form-control" id="height" placeholder="Enter height(in)" name="Height" required>
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
@@ -35,31 +35,37 @@
     </div>
     <!-- age -->
     <div class="form-group">
-        <label for="Age">Are you looking to be slim, fit, or hulking?:</label>
+        <label for="Age">What is yor age?:</label>
         <input type="number" class="form-control" id="age" placeholder="Enter your age" name="Age" required>
         <div class="valid-feedback">Valid.</div>
         <div class="invalid-feedback">Please fill out this field.</div>
     </div>
     <!-- body type -->
     <div class="form-group">
-      <label for="BodyType">Are you looking to be slim, fit, or hulking?:</label>
-      <input type="text" class="form-control" id="bodyType" placeholder="Enter body type" name="BodyType" required>
-      <div class="valid-feedback">Valid.</div>
-      <div class="invalid-feedback">Please fill out this field.</div>
+      <label for="Bodytype">What is the body type you are trying to achieve?:</label><br>
+      <input type="radio" id="type1" name="Type" value="built">
+      <label for="type1">Built</label><br>
+      <input type="radio" id="type2" name="Type" value="fit">
+      <label for="type2">Fit</label><br>
+      <input type="radio" id="type3" name="Type" value="slim">
+      <label for="type3">Slim</label><br>
     </div>
      <!-- want to workout? -->
     <div class="form-group">
-      <label for="YourChoice">Are you working out by choice?:</label>
-      <input type="text" class="form-control" id="yourChoice" placeholder="Enter your choice" name="YourChoice" required>
-      <div class="valid-feedback">Valid.</div>
+      <label for="YourChoice">Are you working out by choice?:</label><br>
+      <input type="radio" id="choice1" name="Choice" value="yes">
+      <label for="choice1">yes</label><br>
+      <input type="radio" id="choice2" name="Choice" value="no">
+      <label for="choice2">no</label><br>
       <div class="invalid-feedback">Please fill out this field.</div>   <!-- want to workout? -->
     </div>
     <div class="form-group form-check">
-      <label class="form-check-label">
-        <input class="form-check-input" type="checkbox" name="remember" required> I am doing this of my own accord and not just filling it untruthfully.
-        <div class="valid-feedback">Valid.</div>
-        <div class="invalid-feedback">Check this checkbox to continue.</div>
-      </label>
+        <label for="Forced">Are you being forced to work out?:</label><br>
+        <input type="radio" id="force1" name="Force" value="yes">
+        <label for="type1">yes</label><br>
+        <input type="radio" id="force2" name="Force" value="no">
+        <label for="type2">no</label><br>
+        <div class="invalid-feedback">Please fill out this field.</div>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 
