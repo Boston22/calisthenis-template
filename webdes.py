@@ -15,64 +15,8 @@ def render_page2():
     return render_template('page2.html')
 
 
-def process_h():
-    if  100 < h < 120:
-        fitIndex + 5
-
-def process_w():
-    if 250 < w <300:
-        fitIndex - 10
-
-def process_a():
-    if 0 < age < 7
-    fitIndex - 7
-
-    elif 8 < age < 12
-    fitIndex - 12
-
-    elif 13 < age < 17
-    fitIndex + 75
-
-    elif 18 < age < 30
-    fitIndex + 100
-
-    elif 31 < age < 41
-    fitIndex + 15
-
-    elif 42 < age < 50
-    fitIndex + 7
-
-    elif 51 < age < 70
-    fitIndex - 35
-
-    elif 71 < age < 95
-    fitIndex - 50
-
-    elif age >=95
-    fitIndex - 100
-
-def process_t():
-    if 8 <  < 12
-
-def process_c():
-    if 0 <  < 10
-
-def process_s():
-    if 0 <  < 10
-
-def process_f():
-    if 0 <  < 10
 
 
-
-
-
-
-def process_index():
-    if fitIndex < 20 :
-        "Yo uneed to work out a lot"
-    if fitIndex > 80:
-        "Here are some specific workouts to do"
 
 
 @app.route("/r")
@@ -84,8 +28,6 @@ def render_response():
     global choice
     global sex
     global forced
-    global fitIndex
-    fitIndex = 0
     height = int(request.args['Height'])
     weight = int(request.args['Weight'])
     age = int(request.args['Age'])
@@ -93,7 +35,27 @@ def render_response():
     choice = request.args['Choice']
     sex = request.args['Sex']
     forced = request.args['Force']
-
+    h1 = request.args['height1']
+    h2 = int(request.args['height2'])
+    h3 = int(request.args['height3'])
+    w1 = int(request.args['weight1'])
+    w2 = int(request.args['weight2'])
+    w3 = int(request.args['weight3'])
+    w4 = int(request.args['weight4'])
+    a1 = int(request.args['age1'])
+    a2 = int(request.args['age2'])
+    a3 = int(request.args['age3'])
+    a4 = int(request.args['age4'])
+    a5 = int(request.args['age5'])
+    a6 = int(request.args['age6'])
+    a7 = int(request.args['age7'])
+    t1 = request.args['type1']
+    t2 = request.args['type2']
+    t3 = request.args['type3']
+    c1 = request.args['choice1']
+    c2 = request.args['choice2']
+    f1 = request.args['force1']
+    f2 = request.args['force2']
 
 
 
