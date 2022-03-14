@@ -24,35 +24,43 @@ def process_w():
         fitIndex - 10
 
 def process_a():
-    if 0 < age < 7
-    fitIndex - 7
+    if 0 < age < 7:
+        fitIndex - 7
 
-    elif 8 < age < 12
-    fitIndex - 12
+    elif 8 < age < 12:
+        fitIndex - 12
 
-    elif 13 < age < 17
-    fitIndex + 75
+    elif 13 < age < 17:
+        fitIndex + 75
 
-    elif 18 < age < 30
-    fitIndex + 100
+    elif 18 < age < 30:
+        fitIndex + 100
 
-    elif 31 < age < 41
-    fitIndex + 15
+    elif 31 < age < 41:
+        fitIndex + 15
 
-    elif 42 < age < 50
-    fitIndex + 7
+    elif 42 < age < 50:
+        fitIndex + 7
 
-    elif 51 < age < 70
-    fitIndex - 35
+    elif 51 < age < 70:
+        fitIndex - 35
 
-    elif 71 < age < 95
-    fitIndex - 50
+    elif 71 < age < 95:
+        fitIndex - 50
 
-    elif age >=95
-    fitIndex - 100
+    elif age >=95:
+        fitIndex - 100
 
 def process_t():
-    if 8 <  < 12
+    if type == "slim":
+        fitIndex + 70
+
+    elif type == "fit":
+        fitIndex + 45
+
+    elif type == "built":
+        fitIndex + 20
+
 
 def process_c():
     if 0 <  < 10
