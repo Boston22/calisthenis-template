@@ -15,72 +15,113 @@ def render_page2():
     return render_template('page2.html')
 
 
-def process_h():
-    if  100 < h < 120:
-        fitIndex + 5
+def process_h(): #height
+    if  24 <= height <= 35:
+        fitIndex = fitIndex + 100
+    elif if  36 <= height <= 47:
+        fitIndex = fitIndex + 100
+    elif 48 <= height <=59 :
+        fitIndex = fitIndex + 100
+    elif 60 <= height <= 71:
+        fitIndex = fitIndex + 90
+    elif 72 <= height <= 83:
+        fitIndex = fitIndex + 75
+    elif 84 <= height <= 96:
+        fitIndex = fitIndex + 75
 
-def process_w():
-    if 250 < w <300:
-        fitIndex - 10
+def process_w(): #weight
+    if weight <= 100:
+        fitIndex = fitIndex - 100
+    elif 101 <= weight <= 120:
+        fitIndex = fitIndex + 50
+    elif 121 <= weight <= 140:
+        fitIndex = fitIndex + 50
+    elif 141 <= weight <= 160:
+        fitIndex = fitIndex + 100
+    elif 161 <= weight <= 180:
+        fitIndex = fitIndex + 85
+    elif 181 <= weight <= 200:
+        fitIndex = fitIndex + 75
+    elif 201 <= weight <= 220:
+        fitIndex = fitIndex - 10
+    elif 221 <= weight <= 240:
+        fitIndex = fitIndex - 25
+    elif 241 <= weight <= 260:
+        fitIndex = fitIndex - 50
+    elif 261 <= weight <= 300:
+        fitIndex = fitIndex - 75
 
-def process_a():
-    if 0 < age < 7:
-        fitIndex - 7
+def process_a(): #age
+    if 0 <= age <= 7:
+        fitIndex = fitIndex - 50
+    elif 8 <= age <= 12:
+        fitIndex = fitIndex - 25
+    elif 13 <= age <= 17:
+        fitIndex = fitIndex + 75
+    elif 18 <= age <= 30:
+        fitIndex = fitIndex + 100
+    elif 31 <= age <= 41:
+        fitIndex = fitIndex + 15
+    elif 42 <= age <= 50:
+        fitIndex = fitIndex + 7
+    elif 51 <= age <= 70:
+        fitIndex = fitIndex - 35
+    elif 71 <= age <= 90:
+        fitIndex = fitIndex - 50
+    elif age >=91:
+        fitIndex = fitIndex - 100
 
-    elif 8 < age < 12:
-        fitIndex - 12
-
-    elif 13 < age < 17:
-        fitIndex + 75
-
-    elif 18 < age < 30:
-        fitIndex + 100
-
-    elif 31 < age < 41:
-        fitIndex + 15
-
-    elif 42 < age < 50:
-        fitIndex + 7
-
-    elif 51 < age < 70:
-        fitIndex - 35
-
-    elif 71 < age < 95:
-        fitIndex - 50
-
-    elif age >=95:
-        fitIndex - 100
-
-def process_t():
+def process_t(): #type
     if type == "slim":
-        fitIndex + 70
-
+        fitIndex = fitIndex + 75
     elif type == "fit":
-        fitIndex + 45
-
+        fitIndex = fitIndex + 50
     elif type == "built":
-        fitIndex + 20
+        fitIndex = fitIndex + 25
+
+def process_f(): #forced
+    if forced == yes:
+        fitIndex = fitIndex + 100
+    elif forced == no:
+        fitIndex = fitIndex - 100
+
+def process_c(): #choice
+    if choice == yes:
+        fitIndex = fitIndex + 100
+    elif choice == no:
+        fitIndex = fitIndex - 100
 
 
-def process_c():
-    if 0 <  < 10
-
-def process_s():
-    if 0 <  < 10
-
-def process_f():
-    if 0 <  < 10
 
 
 
+# final    def process_s():
+#    if sex == male:
+
+
+    #elif sex == female:
 
 
 
-def process_index():
-    if fitIndex < 20 :
-        "Yo uneed to work out a lot"
-    if fitIndex > 80:
+def process_index(): #what happens based on score from form
+    if fitIndex <= 200 :
+        "Do not do"
+    elif 201 <= fitIndex => 300:
         "Here are some specific workouts to do"
+    elif 301 <= fitIndex => 400:
+        "fitIndex is between 301 and 400"
+    elif 401 <= fitIndex => 500:
+        "fitIndex is between 401 and 500"
+    elif 501 <= fitIndex => 600:
+        "fitIndex is between 501 and 600"
+    elif 601 <= fitIndex => 700:
+        "fitIndex is between 601 and 700"
+    elif 701 <= fitIndex => 800:
+        "fitIndex is between 701 and 800"
+    elif 801 <= fitIndex => 900:
+        "fitIndex is between 801 and 900"
+    elif 901 <= fitIndex => 1000:
+        "fitIndex is between 901 and 1000"
 
 
 @app.route("/r")
