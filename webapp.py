@@ -18,9 +18,9 @@ def render_page2():
 def process_h(): #height
     if  24 <= height <= 35:
         fitIndex = fitIndex + 100
-    elif if  36 <= height <= 47:
+    elif 36 <= height <= 47:
         fitIndex = fitIndex + 100
-    elif 48 <= height <=59 :
+    elif 48 <= height <=59:
         fitIndex = fitIndex + 100
     elif 60 <= height <= 71:
         fitIndex = fitIndex + 90
@@ -80,15 +80,15 @@ def process_t(): #type
         fitIndex = fitIndex + 25
 
 def process_f(): #forced
-    if forced == yes:
+    if forced == "yes":
         fitIndex = fitIndex + 100
-    elif forced == no:
+    elif forced == "no":
         fitIndex = fitIndex - 100
 
 def process_c(): #choice
-    if choice == yes:
+    if choice == "yes":
         fitIndex = fitIndex + 100
-    elif choice == no:
+    elif choice == "no":
         fitIndex = fitIndex - 100
 
 
