@@ -93,6 +93,12 @@ def process_c(): #choice
 
 
 
+# for inputting sex render_variables
+# if 500 <= fitIndex <= 600 and male
+
+# elif 601 <= fitIndex <= 700 and female
+
+
 
 
 # final    def process_s():
