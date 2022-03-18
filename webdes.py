@@ -60,6 +60,12 @@ def render_response():
 
 
 
+    process_w():
+        if w == 110:
+            return -20
+
+    process_index():
+        fitIndex = 0 + process_w() + process_c() + process_a() + process_t()
 
 
 
