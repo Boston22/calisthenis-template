@@ -114,58 +114,66 @@ def render_page2():
 
 
 
-def process_index(sex): #what happens based on score from form
+def process_index(sex):
+    global fitIndex
+    fitIndex = 0 + process_w(weight) + process_c(choice) + process_a(age) + process_t(type) + process_h(height) + process_f(forced) #what happens based on score from form
     if fitIndex <= 200 and sex == "male":
-        "Do not do"
+        return "Do not do"
     elif fitIndex <= 200 and sex == "female":
-        "Do not do"
+        return "Do not do"
 
     elif 201 <= fitIndex >= 300 and sex == "male":
-        "Here are some specific workouts to do"
+        return "Here are some specific workouts to do"
     elif 201 <= fitIndex >= 300 and sex == "female":
-        "Here are some specific workouts to do"
+        return "Here are some specific workouts to do"
 
     elif 301 <= fitIndex >= 400 and sex == "male":
-        "fitIndex is between 301 and 400"
+        return "fitIndex is between 301 and 400"
     elif 301 <= fitIndex >= 400 and sex == "female":
-        "fitIndex is between 301 and 400"
+        return "fitIndex is between 301 and 400"
 
     elif 401 <= fitIndex >= 500 and sex == "male":
-        "fitIndex is between 401 and 500"
+        return "fitIndex is between 401 and 500"
     elif 401 <= fitIndex >= 500 and sex == "female":
-        "fitIndex is between 401 and 500"
+        return "fitIndex is between 401 and 500"
 
     elif 501 <= fitIndex >= 600 and sex == "male":
-        "fitIndex is between 501 and 600"
+        return "It wold be a waste not to do calisthenics"
     elif 501 <= fitIndex >= 600 and sex == "female":
-        "fitIndex is between 501 and 600"
+        return "It wold be a waste not to do calisthenics"
 
-    elif 601 <= fitIndex >= 700 and sex == "male":
-        "fitIndex is between 601 and 700"
-    elif 601 <= fitIndex >= 700 and sex == "female":
-        "fitIndex is between 601 and 700"
+    #elif 601 <= fitIndex >= 700 and sex == "male":
+    #    "fitIndex is between 601 and 700"
+    #elif 601 <= fitIndex >= 700 and sex == "female":
+    #    "fitIndex is between 601 and 700"
 
-    elif 701 <= fitIndex >= 800 and sex == "male":
-        "fitIndex is between 701 and 800"
-    elif 701 <= fitIndex >= 800 and sex == "female":
-        "fitIndex is between 701 and 800"
+    #elif 701 <= fitIndex >= 800 and sex == "male":
+    #    "fitIndex is between 701 and 800"
+    #elif 701 <= fitIndex >= 800 and sex == "female":
+    #    "fitIndex is between 701 and 800"
 
-    elif 801 <= fitIndex >= 900 and sex == "male":
-        "fitIndex is between 801 and 900"
-    elif 801 <= fitIndex >= 900 and sex == "female":
-        "fitIndex is between 801 and 900"
+    #elif 801 <= fitIndex >= 900 and sex == "male":
+    #    "fitIndex is between 801 and 900"
+    #elif 801 <= fitIndex >= 900 and sex == "female":
+    #    "fitIndex is between 801 and 900"
 
-    elif 901 <= fitIndex >= 1000 and sex == "male":
-        "fitIndex is between 901 and 1000"
-    elif 901 <= fitIndex >= 1000 and sex == "female":
-        "fitIndex is between 901 and 1000"
+    #elif 901 <= fitIndex >= 1000 and sex == "male":
+    #    "fitIndex is between 901 and 1000"
+    #elif 901 <= fitIndex >= 1000 and sex == "female":
+    #    "fitIndex is between 901 and 1000"
 
 
 
 @app.route("/r")
 def render_response():
     global fitIndex
-    fitIndex = 1000
+    global height
+    global weight
+    global age
+    global type
+    global choice
+    global sex
+    global forced
     height = int(request.args['Height'])
     weight = int(request.args['Weight'])
     age = int(request.args['Age'])
@@ -173,15 +181,10 @@ def render_response():
     choice = request.args['Choice']
     sex = request.args['Sex']
     forced = request.args['Force']
-    process_h(height)
-    process_w(weight)
-    process_a(age)
-    process_t(type)
-    process_f(forced)
-    process_c(choice)
+
     process_index(sex)
 
-    return render_template('response.html', response1 = fitIndex)
+    return render_template('response.html', response1 = fitIndex, instructions = process_index(sex))
 
 if __name__=="__main__":
     app.run(debug=True)
